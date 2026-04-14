@@ -1,0 +1,4 @@
+sudo pkill -f anaconda
+sudo pkill -f livemedia-creator
+sudo pkill -f qemu
+sudo rm -rf /var/tmp/lmc-*

@@ -1,0 +1,5 @@
+v1.0 → gnome/
+v1.1 → gnome-v1.1/
+v1.2 → gnome-v1.2/
+
+(used livemedia-creator with --no-virt and iso-only)
