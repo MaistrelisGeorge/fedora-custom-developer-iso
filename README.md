@@ -7,6 +7,8 @@ A custom **Fedora 43 GNOME Live ISO** built to demonstrate that Linux can be con
 
 ---
 
+> **Full documentation** — [Project Wiki](../../wiki) — Build pipeline, kickstart reference, troubleshooting, and dissertation context.
+
 ## Screenshots
 
 ### The ISO - Live Session
