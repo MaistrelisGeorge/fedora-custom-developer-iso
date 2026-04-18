@@ -63,7 +63,7 @@ This repository contains the complete build system for **FedDev 43** - a custom 
 
 ### System-Wide GNOME Customisation
 
-Applied via `dconf` system database — affects all users at first boot, overridable per-user:
+Applied via `dconf` system database - affects all users at first boot, overridable per-user:
 
 - **Dark mode** enabled by default (`prefer-dark`)
 - **Nautilus**: hidden files visible, list view as default
