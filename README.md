@@ -133,6 +133,35 @@ qemu-system-x86_64 \
 
 ---
 
+## Interactive GUI Builder (v2)
+
+A lightweight GUI wrapper was introduced using Zenity to simplify interaction with the ISO builder.
+
+It allows:
+
+- Running setup and cleanup operations
+- Viewing available ISO builds
+- Selecting and testing ISOs using QEMU
+- Launching the builder from the desktop (Run in Terminal)
+
+### GUI Main Menu
+
+![GUI Main](screenshots/v1.6/10-gui-main.png)
+
+### List Builds (GUI)
+
+![GUI List Builds](screenshots/v1.6/11-gui-list-builds.png)
+
+### Test ISO Selection
+
+![GUI Test Select](screenshots/v1.6/12-gui-test-select.png)
+
+### QEMU Launch (GUI)
+
+![GUI QEMU](screenshots/v1.6/13-gui-qemu-run.png)
+
+---
+
 ## Repository Structure
 ```
 kickstarts/
