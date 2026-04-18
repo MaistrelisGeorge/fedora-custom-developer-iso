@@ -1,4 +1,4 @@
-# FedDev 43 — Custom Fedora Developer Live ISO
+# FedDev 43 - Custom Fedora Developer Live ISO
 
 > **BSc Computing Dissertation Artifact** · University of Bolton · CLD6001  
 > Student: George Maistrelis (2331873) · Supervisor: Mr. Georgios Prokopakis
