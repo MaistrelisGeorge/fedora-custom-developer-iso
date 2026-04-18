@@ -3,13 +3,13 @@
 > **BSc Computing Dissertation Artifact** · University of Bolton · CLD6001  
 > Student: George Maistrelis (2331873) · Supervisor: Mr. Georgios Prokopakis
 
-A custom **Fedora 43 GNOME Live ISO** built to demonstrate that Linux can be configured, automated, and deployed as a production-ready developer workstation for workplace use. The project includes the ISO build system, an interactive CLI builder, and a Zenity GUI wrapper — all built on top of the official Fedora kickstart toolchain.
+A custom **Fedora 43 GNOME Live ISO** built to demonstrate that Linux can be configured, automated, and deployed as a production-ready developer workstation for workplace use. The project includes the ISO build system, an interactive CLI builder, and a Zenity GUI wrapper - all built on top of the official Fedora kickstart toolchain.
 
 ---
 
 ## Screenshots
 
-### The ISO — Live Session
+### The ISO - Live Session
 
 | GRUB Boot | GNOME Desktop | Nautilus (Files) |
 |-----------|--------------|------------------|
@@ -39,11 +39,11 @@ A custom **Fedora 43 GNOME Live ISO** built to demonstrate that Linux can be con
 
 ## What Is This?
 
-This repository contains the complete build system for **FedDev 43** — a custom Fedora 43 Live ISO designed for developer workplace deployment. The project demonstrates:
+This repository contains the complete build system for **FedDev 43** - a custom Fedora 43 Live ISO designed for developer workplace deployment. The project demonstrates:
 
 - **Technical feasibility**: A bootable, developer-ready Linux environment built entirely from official Fedora sources using the Kickstart + livemedia-creator toolchain
 - **Enterprise customisation**: A build pipeline that can produce tailored ISO variants (minimal, developer, enterprise) from a single codebase
-- **Automation**: From manual kickstart editing to a GUI-driven point-and-click builder — the entire build process is accessible to non-expert users
+- **Automation**: From manual kickstart editing to a GUI-driven point-and-click builder - the entire build process is accessible to non-expert users
 
 ---
 
@@ -74,9 +74,9 @@ Applied via `dconf` system database — affects all users at first boot, overrid
 
 Every user account (live and installed) receives:
 
-- **`.bashrc`** — Git aliases (`gs`, `gp`), `ll` alias, `dc` shortcut for `dev-check`, MOTD display on terminal start
-- **`.gitconfig`** — Template with sane defaults (main branch, rebase pull)
-- **`.vimrc`** — Line numbers, syntax highlighting
+- **`.bashrc`** - Git aliases (`gs`, `gp`), `ll` alias, `dc` shortcut for `dev-check`, MOTD display on terminal start
+- **`.gitconfig`** - Template with sane defaults (main branch, rebase pull)
+- **`.vimrc`** - Line numbers, syntax highlighting
 
 ### `dev-check` Utility
 
@@ -84,7 +84,7 @@ Every user account (live and installed) receives:
 dev-check   # or: dc
 ```
 
-Validates the entire developer toolchain in one command — confirms git, Node.js, Python, Podman, ripgrep, and fzf are installed and prints their versions.
+Validates the entire developer toolchain in one command - confirms git, Node.js, Python, Podman, ripgrep, and fzf are installed and prints their versions.
 
 ### MOTD (Message of the Day)
 
@@ -128,7 +128,7 @@ Fedora 43 host with:
 sudo dnf install -y lorax-lmc-novirt pykickstart git
 ```
 
-### Option A — Interactive Builder (Recommended)
+### Option A - Interactive Builder (Recommended)
 
 ```bash
 git clone https://github.com/MaistrelisGeorge/fedora-custom-developer-iso.git
@@ -143,7 +143,7 @@ The builder will guide you through:
 3. Choosing optional extras (GNOME defaults, dotfiles, MOTD, dev-check)
 4. Building the ISO automatically
 
-### Option B — GUI Builder
+### Option B - GUI Builder
 
 ```bash
 chmod +x tools/gui-builder-v2.sh
@@ -152,7 +152,7 @@ chmod +x tools/gui-builder-v2.sh
 
 Requires `zenity` (`sudo dnf install -y zenity`). Provides a point-and-click interface to the same build pipeline.
 
-### Option C — Manual Build
+### Option C - Manual Build
 
 ```bash
 # 1. Download Fedora 43 netinstall ISO
@@ -213,11 +213,11 @@ The Interactive ISO Builder (v1.6) provides four profiles:
 
 | Version | Key Addition |
 |---------|-------------|
-| v1.0 | First working GNOME baseline — packages only |
+| v1.0 | First working GNOME baseline - packages only |
 | v1.1 | Extended developer toolset (Node, containers, CLI tools, build tools) |
 | v1.2 | GNOME dconf customisation (dark mode, hidden files, list view) |
 | v1.3 | `/etc/skel` dotfiles, `dev-check` script, MOTD |
-| v1.4 | MOTD auto-display fix in GNOME Terminal via `.bashrc` — **final ISO** |
+| v1.4 | MOTD auto-display fix in GNOME Terminal via `.bashrc` - **final ISO** |
 
 ISO files are not stored in this repository. SHA256 checksums are in `checksums/`.
 
@@ -231,14 +231,14 @@ This project is the practical artifact for the dissertation:
 > BSc Computing · University of Bolton · Module CLD6001 · May 2026
 
 The ISO demonstrates that modern Linux distributions can be configured for workplace deployment with:
-- **Zero manual setup** for end users — everything pre-configured
-- **Reproducible builds** — the entire OS image can be recreated from source
-- **Scalable customisation** — the builder generates department-specific variants from one codebase
-- **Enterprise-grade tooling** — rootless containers (Podman), SELinux enforcing, locked root account
+- **Zero manual setup** for end users - everything pre-configured
+- **Reproducible builds** - the entire OS image can be recreated from source
+- **Scalable customisation** - the builder generates department-specific variants from one codebase
+- **Enterprise-grade tooling** - rootless containers (Podman), SELinux enforcing, locked root account
 
 ### Case Study Connection
 
-This project's automated deployment approach directly addresses the lessons from real-world Linux workplace adoption: the French Gendarmerie's successful 72,000-workstation Ubuntu deployment, Germany's Schleswig-Holstein state migration, and the lessons of Munich's LiMux project — all of which identified management tooling and deployment automation as key success factors.
+This project's automated deployment approach directly addresses the lessons from real-world Linux workplace adoption: the French Gendarmerie's successful 72,000-workstation Ubuntu deployment, Germany's Schleswig-Holstein state migration, and the lessons of Munich's LiMux project - all of which identified management tooling and deployment automation as key success factors.
 
 ---
 
@@ -254,13 +254,13 @@ KDE was attempted first but the f43 kickstart has KF5/KF6 package conflicts (RPM
 `grub2-pc-modules`, `grub2-efi-x64`, `shim-x64`, and `grub2-common` must be present inside the target image for lorax's `--no-virt` mode to complete the EFI boot structure. Without them, the ISO is not UEFI-bootable.
 
 **Why dconf for GNOME defaults?**  
-Running `gsettings` in `%post` fails because there is no active D-Bus session in the chroot environment. The dconf system database approach writes keyfiles to `/etc/dconf/db/local.d/` and compiles them with `dconf update` — this works without a running desktop session.
+Running `gsettings` in `%post` fails because there is no active D-Bus session in the chroot environment. The dconf system database approach writes keyfiles to `/etc/dconf/db/local.d/` and compiles them with `dconf update` - this works without a running desktop session.
 
 ---
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE)
+MIT - see [LICENSE](LICENSE)
 
 ---
 
